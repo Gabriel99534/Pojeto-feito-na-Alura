@@ -1,0 +1,66 @@
+.contato {
+    background-color: var(--branco);
+    padding: 1em; /* 1em em todos os lados */
+}
+
+.contato__titulo, .contato__texto {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* é o que permite colocar degrade no text */
+    
+}
+
+.contato__titulo {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contato__texto {
+    font-weight: 300;
+    padding: 0.8em 0; /* 0.6em em cima e embaixo 0 direita e esquerda */
+}
+
+.contato__email {
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;  /* vai ocupar 90% da pagina */
+    color: var(--azul);
+}
+
+.contato__email::placeholder {
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+    background: url("../imagens/email.svg") no-repeat; /* colocado o no-repeat junto */
+    padding-left: 2em; /* irá afastar a texto da imagem */
+}
+
+@media screen and (min-width: 1024px) {
+    .contato {
+        display: flex;
+        justify-content: center; /* coloca o conteúdo do display flex no centro */
+        align-items: center; /* Alinha os itens */
+    }
+
+    .contato__titulo {
+        font-size: 24px;
+    }
+
+    .contato__email {
+        width: 30%;  
+    }
+
+    .contato__discrição {
+        margin-right: 5em;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .contato {
+        padding: 3em 20vw;
+    }
+    
+}
